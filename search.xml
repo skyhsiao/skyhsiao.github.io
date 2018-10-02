@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[README.md]]></title>
+    <url>%2Funcategorized%2FREADME-md%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[一键安装脚本“openvpn-install”让服务器搭建更简单]]></title>
+    <url>%2F%E6%95%99%E7%A8%8B%2F%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E2%80%9Copenvpn-install%E2%80%9D%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%9B%B4%E7%AE%80%E5%8D%95%2F</url>
+    <content type="text"><![CDATA[OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。 安装命令：wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。 安装步聚： 确定该IP地址是你的服务器公网IP既可，回车。 默认是1，看视频和游戏必须UDP。 端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。 然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续… 一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。 本教程来源于佐仔志]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>vpn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2Funcategorized%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[IPsec VPN 服务器一键安装脚本]]></title>
-    <url>%2F2018%2F09%2F26%2FIPsec-VPN-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%2F</url>
+    <url>%2F%E6%95%99%E7%A8%8B%2FIPsec-VPN-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[​ 使用 Linux 脚本一键快速搭建自己的 IPsec VPN 服务器。支持 IPsec/L2TP 和 Cisco IPsec 协议，可用于 Ubuntu/Debian/CentOS 系统。你只需提供自己的 VPN 登录凭证，然后运行脚本自动完成安装。 系统要求 Ubuntu 18.04 (Bionic), 16.04 (Xenial) or 14.04 (Trusty) Debian 9 (Stretch) or 8 (Jessie) CentOS 7 (x86_64) with Updates CentOS 6 (x86_64) with Updates 安装说明Ubuntu &amp; Debian首先，更新你的系统： 运行 apt-get update &amp;&amp; apt-get dist-upgrade 并重启。这一步是可选的，但推荐。 要安装 VPN，请从以下选项中选择一个： 选项 1: 使用脚本随机生成的 VPN 登录凭证 （完成后会在屏幕上显示）： 1wget https://git.io/vpnsetup -O vpnsetup.sh &amp;&amp; sudo sh vpnsetup.sh 选项 2: 编辑脚本并提供你自己的 VPN 登录凭证： 1234wget https://git.io/vpnsetup -O vpnsetup.shnano -w vpnsetup.sh[替换为你自己的值： YOUR_IPSEC_PSK, YOUR_USERNAME 和 YOUR_PASSWORD]sudo sh vpnsetup.sh 选项 3: 将你自己的 VPN 登录凭证定义为环境变量： 123456# 所有变量值必须用 '单引号' 括起来# *不要* 在值中使用这些字符： \ " 'wget https://git.io/vpnsetup -O vpnsetup.sh &amp;&amp; sudo \VPN_IPSEC_PSK='你的IPsec预共享密钥' \VPN_USER='你的VPN用户名' \VPN_PASSWORD='你的VPN密码' sh vpnsetup.sh CentOS &amp; RHEL首先，更新你的系统： 运行 yum update 并重启。这一步是可选的，但推荐。 按照与上面相同的步骤，但是将 https://git.io/vpnsetup 换成 https://git.io/vpnsetup-centos。]]></content>
       <categories>
         <category>教程</category>
@@ -13,7 +34,7 @@
   </entry>
   <entry>
     <title><![CDATA[一个V2ray的可视化控制面板]]></title>
-    <url>%2F2018%2F09%2F26%2F%E4%B8%80%E4%B8%AAV2ray%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%2F</url>
+    <url>%2F%E6%95%99%E7%A8%8B%2F%E4%B8%80%E4%B8%AAV2ray%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%2F</url>
     <content type="text"><![CDATA[简介一个基于 Web 的 V2ray 控制面板 系统支持请务必使用新系统，纯净的VPS系统安装!!! Debian 8 Debian 9(推荐) Ubuntu 14 Ubuntu 16 CentOS 7 不支持 CentOS 6 一键安装目前处于测试阶段，不保证一键脚本能安装成功 1wget -N --no-check-certificate &lt;https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh&gt; &amp;&amp; bash install.sh 来自于FunctionClub]]></content>
       <categories>
         <category>教程</category>
@@ -24,7 +45,7 @@
   </entry>
   <entry>
     <title><![CDATA[hexo 给博客添加版权、共享按钮、打赏]]></title>
-    <url>%2F2018%2F09%2F26%2Fhexo-%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E3%80%81%E5%85%B1%E4%BA%AB%E6%8C%89%E9%92%AE%E3%80%81%E6%89%93%E8%B5%8F%2F</url>
+    <url>%2Fblog%2Fhexo-%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E3%80%81%E5%85%B1%E4%BA%AB%E6%8C%89%E9%92%AE%E3%80%81%E6%89%93%E8%B5%8F%2F</url>
     <content type="text"><![CDATA[一、配置 版权1234post_copyright: enable: true author: hiekay copyright_text: 作者拥有版权，请注明出处转载。1234 二、添加共享按钮- 安装 1npm install --save hexo-helper-qrcode 配置： 1shareto: true 三、添加打赏二维码 1、准备好支付宝、微信收款二维码 2、放到img/ 目录下 3、在配置文件中配置 12345donate: enable: true alipay_qr: /img/AliPayQR.png wechat_qr: /img/WeChatQR.png paypal_url:]]></content>
       <categories>
         <category>blog</category>
@@ -35,7 +56,7 @@
   </entry>
   <entry>
     <title><![CDATA[分享一个不错的直链提取网站 免费 无限制]]></title>
-    <url>%2F2018%2F09%2F22%2F%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E7%9B%B4%E9%93%BE%E6%8F%90%E5%8F%96%E7%BD%91%E7%AB%99-%E5%85%8D%E8%B4%B9-%E6%97%A0%E9%99%90%E5%88%B6%2F</url>
+    <url>%2F%E5%88%86%E4%BA%AB%2F%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E7%9B%B4%E9%93%BE%E6%8F%90%E5%8F%96%E7%BD%91%E7%AB%99-%E5%85%8D%E8%B4%B9-%E6%97%A0%E9%99%90%E5%88%B6%2F</url>
     <content type="text"><![CDATA[网站地址：http://www.autogeneratelink.us/ 支持类型Mega, Xvideos, Pornhub, Redtube, Youporn, Xhamster, Tusfiles, kbagi, Zippyshare, Academia.edu, Scribd, Upfile.mobi, Addfile.org, 4Sync, 1Fichier, Solidfiles, Soundcloud, Indishare, Google Play, Dropbox, Datafilehost, MirrorCreator, Slideshare, 2Shared, YouTube, Facebook Video, Instagram Video, Vimeo, Uppit, Gett, Elsfile, Zxcfiles, Sendspace, Sharemods, Mp4upload, Bdupload, Userscloud, Usersfiles, Diskokosmiko, Clicknupload, Sendit.cloudshortlink (adf.ly, sh.st, adfoc.us, linkshrink, link.safelinkconverter.com, safelinkreview.com, p.pw, goo.gl, bitly, mir.cr,etc） 使用直接将要提取的链接粘贴，然后点击Generate 可用于下载Youtube视频，其他用途自行探索。]]></content>
       <categories>
         <category>分享</category>
@@ -46,20 +67,10 @@
   </entry>
   <entry>
     <title><![CDATA[全系linux VPS两步开启魔改BBR]]></title>
-    <url>%2F2018%2F09%2F21%2F%E5%85%A8%E7%B3%BBlinux-VPS%E4%B8%A4%E6%AD%A5%E5%BC%80%E5%90%AF%E9%AD%94%E6%94%B9BBR%2F</url>
+    <url>%2Funcategorized%2F%E5%85%A8%E7%B3%BBlinux-VPS%E4%B8%A4%E6%AD%A5%E5%BC%80%E5%90%AF%E9%AD%94%E6%94%B9BBR%2F</url>
     <content type="text"><![CDATA[随着Linux系统内核不断升级，破解版锐速渐渐的跟不上了。BBR以其原生占用小的特点赢得越来越多人的喜爱，魔改版的BBR更是听说非常暴力。这里分享一个找到的魔改BBR脚本，在Ubuntu系统上测试成功。该脚本借鉴了Vicer大佬的脚本，执行两步后最后输出==Finish！==则成功。 Github地址：https://github.com/xratzh/CBBR Debian/Ubuntu（64位）开启魔改BBRUbuntu14.04需要提前：1234sudo apt-get install -y software-properties-commonsudo add-apt-repository ppa:ubuntu-toolchain-r/testsudo apt-get updatesudo apt-get -y install g++-4.9 Debian9需要提前：123wget http://snapshot.debian.org/archive/debian/20150123T220434Z/pool/main/o/openssl/libssl1.0.0_1.0.2-1_amd64.debdpkg -i libssl1.0.0_1.0.2-1_amd64.deb 以下命令Debian/Ubuntu通用第一步：1apt-get install -y wget &amp;&amp; wget --no-check-certificate -O D1.sh https://raw.githubusercontent.com/xratzh/CBBR/master/D1.sh &amp;&amp; bash D1.sh 之后要求输入Y就会重启第二步：1wget --no-check-certificate -O D2.sh https://raw.githubusercontent.com/xratzh/CBBR/master/D2.sh &amp;&amp; bash D2.sh – CentOS7开启魔改BBR第一步：1yum install -y wget &amp;&amp; wget --no-check-certificate -O C71.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C71.sh &amp;&amp; bash C71.sh 之后同样会要求输入Y重启第二步：1wget --no-check-certificate -O C72.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C72.sh &amp;&amp; bash C72.sh – CentOS6开启魔改BBR第一步：1yum install -y wget &amp;&amp; wget --no-check-certificate -O C61.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C61.sh &amp;&amp; bash C61.sh 之后输入Y就会重启第二步：1wget --no-check-certificate -O C62.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C62.sh &amp;&amp; bash C62.sh – 存在对于其他内核的删除，只保留4.11.8内核为什么不能一键，因为Linux内核在4.0后支持不重启更换，但是CentOS和Debian/Ubuntu很多的内核都是3.X的版本，Debian9和Ubuntu16.04则是4.X的版本。Xratzh压力测试，发现bbr和魔改bbr都开启时会达到最快（个人验证）脚本里加入了对内核的锁定，之后update时不会变动内核。内核统一选择4.11.8版本。 – Ps: 本教程转至 ==厘米天空==]]></content>
       <tags>
         <tag>VPS教程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[CentOS安装OpenLiteSpeed服务器环境]]></title>
-    <url>%2F2018%2F09%2F20%2FCentOS%E5%AE%89%E8%A3%85OpenLiteSpeed%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F09%2F20%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>

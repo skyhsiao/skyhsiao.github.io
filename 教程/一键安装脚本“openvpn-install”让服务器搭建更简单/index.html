@@ -29,9 +29,13 @@
   
   
     
+      
     
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
 
 
 
@@ -93,7 +97,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '6.4.1',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -108,18 +112,24 @@
     }
   };
 </script>
-  <meta name="description" content="一、配置 版权1234post_copyright:  enable: true   author: hiekay   copyright_text: 作者拥有版权，请注明出处转载。1234 二、添加共享按钮- 安装 1npm install --save hexo-helper-qrcode 配置： 1shareto: true 三、添加打赏二维码 1、准备好支付宝、微信收款二维码 2、放到im">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Git">
+<meta name="keywords" content="vpn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 给博客添加版权、共享按钮、打赏">
-<meta property="og:url" content="http://yoursite.com/2018/09/26/hexo-给博客添加版权、共享按钮、打赏/index.html">
+<meta property="og:title" content="一键安装脚本“openvpn-install”让服务器搭建更简单">
+<meta property="og:url" content="http://yoursite.com/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/index.html">
 <meta property="og:site_name" content="Dream Sky">
-<meta property="og:description" content="一、配置 版权1234post_copyright:  enable: true   author: hiekay   copyright_text: 作者拥有版权，请注明出处转载。1234 二、添加共享按钮- 安装 1npm install --save hexo-helper-qrcode 配置： 1shareto: true 三、添加打赏二维码 1、准备好支付宝、微信收款二维码 2、放到im">
+<meta property="og:description" content="OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Git">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-27T08:29:05.024Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4wy5jqoj316w0bwjsj.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yaufp4j316c05sdg1.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yzhagyj314y0c6dge.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1fvu504ti6tj316g08kq3z.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fvu50uwlx4j319a08a3zo.jpg">
+<meta property="og:updated_time" content="2018-10-02T13:34:20.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo 给博客添加版权、共享按钮、打赏">
-<meta name="twitter:description" content="一、配置 版权1234post_copyright:  enable: true   author: hiekay   copyright_text: 作者拥有版权，请注明出处转载。1234 二、添加共享按钮- 安装 1npm install --save hexo-helper-qrcode 配置： 1shareto: true 三、添加打赏二维码 1、准备好支付宝、微信收款二维码 2、放到im">
+<meta name="twitter:title" content="一键安装脚本“openvpn-install”让服务器搭建更简单">
+<meta name="twitter:description" content="OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Git">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4wy5jqoj316w0bwjsj.jpg">
 
 
 
@@ -128,7 +138,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/26/hexo-给博客添加版权、共享按钮、打赏/">
+  <link rel="canonical" href="http://yoursite.com/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/">
 
 
 
@@ -138,7 +148,7 @@
   };
 </script>
 
-  <title>hexo 给博客添加版权、共享按钮、打赏 | Dream Sky</title>
+  <title>一键安装脚本“openvpn-install”让服务器搭建更简单 | Dream Sky</title>
   
 
 
@@ -337,7 +347,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/26/hexo-给博客添加版权、共享按钮、打赏/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="晖少">
@@ -354,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo 给博客添加版权、共享按钮、打赏
+          <h1 class="post-title" itemprop="name headline">一键安装脚本“openvpn-install”让服务器搭建更简单
               
             
           </h1>
@@ -379,24 +389,12 @@
                 
               
 
-              <time title="Created: 2018-09-26 06:01:12" itemprop="dateCreated datePublished" datetime="2018-09-26T06:01:12+08:00">2018-09-26</time>
+              <time title="Created: 2018-10-02 20:02:30 / Modified: 21:34:20" itemprop="dateCreated datePublished" datetime="2018-10-02T20:02:30+08:00">2018-10-02</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-09-27 16:29:05" itemprop="dateModified" datetime="2018-09-27T16:29:05+08:00">2018-09-27</time>
               
             
           </span>
@@ -413,7 +411,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/教程/" itemprop="url" rel="index"><span itemprop="name">教程</span></a></span>
 
                 
                 
@@ -427,7 +425,7 @@
 
           
           
-             <span id="/2018/09/26/hexo-给博客添加版权、共享按钮、打赏/" class="leancloud_visitors" data-flag-title="hexo 给博客添加版权、共享按钮、打赏">
+             <span id="/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/" class="leancloud_visitors" data-flag-title="一键安装脚本“openvpn-install”让服务器搭建更简单">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -466,17 +464,22 @@
       
 
       
-        <h3 id="一、配置-版权"><a href="#一、配置-版权" class="headerlink" title="一、配置 版权"></a>一、配置 版权</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">post_copyright:</span><br><span class="line">  enable: true </span><br><span class="line">  author: hiekay </span><br><span class="line">  copyright_text: 作者拥有版权，请注明出处转载。1234</span><br></pre></td></tr></table></figure>
-<h3 id="二、添加共享按钮"><a href="#二、添加共享按钮" class="headerlink" title="二、添加共享按钮"></a>二、添加共享按钮</h3><p>- 安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-qrcode</span><br></pre></td></tr></table></figure>
-<p>配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shareto: true</span><br></pre></td></tr></table></figure>
-<h3 id="三、添加打赏二维码"><a href="#三、添加打赏二维码" class="headerlink" title="三、添加打赏二维码"></a>三、添加打赏二维码</h3><ul>
-<li>1、准备好支付宝、微信收款二维码</li>
-<li>2、放到img/ 目录下</li>
-<li>3、在配置文件中配置</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">donate:</span><br><span class="line">  enable: true </span><br><span class="line">  alipay_qr:  /img/AliPayQR.png</span><br><span class="line">  wechat_qr:  /img/WeChatQR.png </span><br><span class="line">  paypal_url:</span><br></pre></td></tr></table></figure>
+        <h1 id="OpenVPN-安装就是这么简单"><a href="#OpenVPN-安装就是这么简单" class="headerlink" title="OpenVPN 安装就是这么简单"></a>OpenVPN 安装就是这么简单</h1><p>OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：<a href="https://github.com/Nyr/openvpn-install" target="_blank" rel="noopener">https://github.com/Nyr/openvpn-install</a> ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。</p>
+<p>适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。</p>
+<p>安装命令：<code>wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</code></p>
+<p>运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。</p>
+<p>安装步聚：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4wy5jqoj316w0bwjsj.jpg" alt=""></p>
+<p>确定该IP地址是你的服务器公网IP既可，回车。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yaufp4j316c05sdg1.jpg" alt=""></p>
+<p>默认是1，看视频和游戏必须UDP。</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yzhagyj314y0c6dge.jpg" alt=""></p>
+<p>端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fvu504ti6tj316g08kq3z.jpg" alt=""></p>
+<p>然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续…</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu50uwlx4j319a08a3zo.jpg" alt=""></p>
+<p>一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。</p>
+<h2 id="本教程来源于佐仔志"><a href="#本教程来源于佐仔志" class="headerlink" title="本教程来源于佐仔志"></a>本教程来源于<a href="https://www.jinbo123.com/7397.html" target="_blank" rel="noopener">佐仔志</a></h2>
       
     </div>
 
@@ -498,7 +501,44 @@
 
     
       </div>
+      <div>
+    
+      
+<div class="my_post_copyright">
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
 
+<!-- JS库 sweetalert 可修改路径 -->
+<script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+<script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+<p><span>本文标题:</span>一键安装脚本“openvpn-install”让服务器搭建更简单</p>
+<p><span>文章作者:</span>晖少</p>
+<p><span>发布时间:</span>2018年10月02日 - 20:02:30</p>
+<p><span>最后更新:</span>2018年10月02日 - 21:34:20</p>
+<p><span>原始链接:</span><a href="/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/" title="一键安装脚本“openvpn-install”让服务器搭建更简单">http://yoursite.com/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/</a>
+<span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/教程/一键安装脚本“openvpn-install”让服务器搭建更简单/" aria-label="复制成功！"></i></span>
+</p>
+<p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+var clipboard = new Clipboard('.fa-clipboard');
+clipboard.on('success', $(function(){
+$(".fa-clipboard").click(function(){
+swal({
+title: "",
+text: '复制成功',
+html: false,
+timer: 500,
+showConfirmButton: false
+});
+});
+}));
+</script>
+
+
+    
+      </div>
     
 
     
@@ -509,7 +549,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+            <a href="/tags/vpn/" rel="tag"><i class="fa fa-tag"></i> vpn</a>
           
         </div>
       
@@ -522,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/22/分享一个不错的直链提取网站-免费-无限制/" rel="next" title="分享一个不错的直链提取网站 免费 无限制">
-                <i class="fa fa-chevron-left"></i> 分享一个不错的直链提取网站 免费 无限制
+              <a href="/uncategorized/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -532,8 +572,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/26/一个V2ray的可视化控制面板/" rel="prev" title="一个V2ray的可视化控制面板">
-                一个V2ray的可视化控制面板 <i class="fa fa-chevron-right"></i>
+              <a href="/uncategorized/README-md/" rel="prev" title="README.md">
+                README.md <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -613,7 +653,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -623,7 +663,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  
+                  <a href="/categories/index.html">
                     
                     
                       
@@ -634,7 +674,7 @@
                     
                     <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
-                  
+                  </a>
                 </div>
               
 
@@ -642,7 +682,7 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -657,7 +697,7 @@
                     
                     <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
-                  
+                  </a>
                 </div>
               
             </nav>
@@ -712,7 +752,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、配置-版权"><span class="nav-number">1.</span> <span class="nav-text">一、配置 版权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、添加共享按钮"><span class="nav-number">2.</span> <span class="nav-text">二、添加共享按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、添加打赏二维码"><span class="nav-number">3.</span> <span class="nav-text">三、添加打赏二维码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenVPN-安装就是这么简单"><span class="nav-number">1.</span> <span class="nav-text">OpenVPN 安装就是这么简单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本教程来源于佐仔志"><span class="nav-number">1.1.</span> <span class="nav-text">本教程来源于佐仔志</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -723,6 +763,8 @@
       
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
           
         </div>
       
@@ -739,7 +781,7 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">晖少</span>
 
@@ -747,19 +789,6 @@
 
   
 </div>
-
-
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.4.1</div>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -845,12 +874,12 @@
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.5.0/velocity.min.js"></script>
   
 
   
   
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.5.0/velocity.ui.min.js"></script>
   
 
   
@@ -908,7 +937,7 @@
   
     <script type="text/javascript">
       window.livereOptions = {
-        refer: '2018/09/26/hexo-给博客添加版权、共享按钮、打赏/'
+        refer: '教程/一键安装脚本“openvpn-install”让服务器搭建更简单/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
@@ -1409,5 +1438,6 @@
 
 </body>
 </html>
+
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
