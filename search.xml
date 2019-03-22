@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[README.md]]></title>
-    <url>%2Funcategorized%2FREADME-md%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[一键安装脚本“openvpn-install”让服务器搭建更简单]]></title>
     <url>%2F%E6%95%99%E7%A8%8B%2F%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E2%80%9Copenvpn-install%E2%80%9D%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%9B%B4%E7%AE%80%E5%8D%95%2F</url>
     <content type="text"><![CDATA[OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。 安装命令：wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。 安装步聚： 确定该IP地址是你的服务器公网IP既可，回车。 默认是1，看视频和游戏必须UDP。 端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。 然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续… 一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。 本教程来源于佐仔志]]></content>
@@ -15,11 +10,6 @@
       <tags>
         <tag>vpn</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Funcategorized%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
     <title><![CDATA[IPsec VPN 服务器一键安装脚本]]></title>
