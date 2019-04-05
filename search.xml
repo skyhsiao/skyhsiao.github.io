@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[OpenVZ 魔改 BBR - lkl-rinetd 一键脚本]]></title>
+    <url>%2FOpenVZ-%E9%AD%94%E6%94%B9-BBR-lkl-rinetd-%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC.html</url>
+    <content type="text"><![CDATA[概述这里是 tcp_nanqinlang 的 lkl-rinetd 分支。 本项目 Github 地址： https://github.com/tcp-nanqinlang/lkl-rinetd 开始使用要求以下： OpenVZ 64 bit Ram &gt;&gt; 64M 更新： 2018-03-24 新增 多网卡 适配 Debian or Ubuntu适用于 单网卡（单 IP） 服务器： 12wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-debianorubuntu.shbash tcp_nanqinlang-rinetd-debianorubuntu.sh 适用于 多网卡（多 IP） 服务器，会为所有网卡（所有 IP）提供加速： 12wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-debianorubuntu-multiNIC.shbash tcp_nanqinlang-rinetd-debianorubuntu-multiNIC.sh CentOS 7和上面一样，也分 单网卡 和 多网卡 版本： 1234567# 单网卡wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-centos.shbash tcp_nanqinlang-rinetd-centos.sh# 多网卡wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-centos-multiNIC.shbash tcp_nanqinlang-rinetd-centos-multiNIC.sh 使用说明以下进行脚本使用说明： 安装 lkl-rinetd此命令用于安装 lkl-rinetd。 在 /home/tcp_nanqinlang 进行安装，所以安装完成后不要动这个文件夹了（除非你想修改端口）。 安装过程中，会提示输入端口号。多个端口号用空格隔开。不支持端口段。 安装完成后，会开启 lkl-rinetd。以后重启机器也会随开机自启。 使用前请注意自己的 iptables 相关设置。 检查 lkl-rinetd 运行状态此命令用于检查 lkl-rinetd 运行与否，可通过返回的提示判断。 卸载 lkl-rinetd运行此命令会删除 /home/tcp_nanqinlang 、移除 rc.local 对应开机自启项和清空 iptables raw 表。属于完整卸载，不会有残留。且卸载后无需重启。 参考 issuehttps://github.com/sometimesnaiveorg/mainland/issues/85]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[一键安装脚本“openvpn-install”让服务器搭建更简单]]></title>
     <url>%2F%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E2%80%9Copenvpn-install%E2%80%9D%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%9B%B4%E7%AE%80%E5%8D%95.html</url>
-    <content type="text"><![CDATA[OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。 安装命令：wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。 安装步聚： 确定该IP地址是你的服务器公网IP既可，回车。 默认是1，看视频和游戏必须UDP。 端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。 然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续… 一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。 本教程来源于佐仔志]]></content>
+    <content type="text"><![CDATA[OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。 安装命令： 1wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。 安装步聚： 确定该IP地址是你的服务器公网IP既可，回车。 默认是1，看视频和游戏必须UDP。 端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。 然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续… 一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。 本教程来源于佐仔志]]></content>
       <categories>
         <category>教程</category>
       </categories>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-02T13:34:20.091Z</updated>
+  <updated>2019-04-05T21:13:43.863Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>OpenVZ 魔改 BBR - lkl-rinetd 一键脚本</title>
+    <link href="http://yoursite.com/OpenVZ-%E9%AD%94%E6%94%B9-BBR-lkl-rinetd-%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC.html"/>
+    <id>http://yoursite.com/OpenVZ-魔改-BBR-lkl-rinetd-一键脚本.html</id>
+    <published>2019-04-05T21:08:47.000Z</published>
+    <updated>2019-04-05T21:13:43.863Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>这里是 <a href="https://github.com/tcp-nanqinlang/wiki/wiki/general" target="_blank" rel="noopener">tcp_nanqinlang</a> 的 <code>lkl-rinetd</code> 分支。</p><p>本项目 Github 地址： <a href="https://github.com/tcp-nanqinlang/lkl-rinetd" target="_blank" rel="noopener">https://github.com/tcp-nanqinlang/lkl-rinetd</a></p><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>要求以下：</p><ul><li>OpenVZ</li><li>64 bit</li><li>Ram &gt;&gt; 64M</li></ul><p>更新： 2018-03-24 新增 多网卡 适配</p><h3 id="Debian-or-Ubuntu"><a href="#Debian-or-Ubuntu" class="headerlink" title="Debian or Ubuntu"></a>Debian or Ubuntu</h3><p>适用于 <code>单网卡（单 IP）</code> 服务器：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/tcp-nanqinlang/</span>lkl-rinetd<span class="regexp">/releases/</span>download<span class="regexp">/1.1.0/</span>tcp_nanqinlang-rinetd-debianorubuntu.sh</span><br><span class="line">bash tcp_nanqinlang-rinetd-debianorubuntu.sh</span><br></pre></td></tr></table></figure><p>适用于 <code>多网卡（多 IP）</code> 服务器，会为所有网卡（所有 IP）提供加速：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/tcp-nanqinlang/</span>lkl-rinetd<span class="regexp">/releases/</span>download<span class="regexp">/1.1.0/</span>tcp_nanqinlang-rinetd-debianorubuntu-multiNIC.sh</span><br><span class="line">bash tcp_nanqinlang-rinetd-debianorubuntu-multiNIC.sh</span><br></pre></td></tr></table></figure><h3 id="CentOS-7"><a href="#CentOS-7" class="headerlink" title="CentOS 7"></a>CentOS 7</h3><p>和上面一样，也分 单网卡 和 多网卡 版本：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单网卡</span></span><br><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/tcp-nanqinlang/</span>lkl-rinetd<span class="regexp">/releases/</span>download<span class="regexp">/1.1.0/</span>tcp_nanqinlang-rinetd-centos.sh</span><br><span class="line">bash tcp_nanqinlang-rinetd-centos.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 多网卡</span></span><br><span class="line">wget https:<span class="regexp">//gi</span>thub.com<span class="regexp">/tcp-nanqinlang/</span>lkl-rinetd<span class="regexp">/releases/</span>download<span class="regexp">/1.1.0/</span>tcp_nanqinlang-rinetd-centos-multiNIC.sh</span><br><span class="line">bash tcp_nanqinlang-rinetd-centos-multiNIC.sh</span><br></pre></td></tr></table></figure><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>以下进行脚本使用说明：</p><h3 id="安装-lkl-rinetd"><a href="#安装-lkl-rinetd" class="headerlink" title="安装 lkl-rinetd"></a>安装 lkl-rinetd</h3><p>此命令用于安装 lkl-rinetd。</p><p>在 <code>/home/tcp_nanqinlang</code> 进行安装，所以安装完成后不要动这个文件夹了（除非你想修改端口）。</p><p>安装过程中，会提示输入端口号。多个端口号用空格隔开。不支持端口段。</p><p>安装完成后，会开启 lkl-rinetd。以后重启机器也会随开机自启。</p><p>使用前请注意自己的 iptables 相关设置。</p><h3 id="检查-lkl-rinetd-运行状态"><a href="#检查-lkl-rinetd-运行状态" class="headerlink" title="检查 lkl-rinetd 运行状态"></a>检查 lkl-rinetd 运行状态</h3><p>此命令用于检查 lkl-rinetd 运行与否，可通过返回的提示判断。</p><h3 id="卸载-lkl-rinetd"><a href="#卸载-lkl-rinetd" class="headerlink" title="卸载 lkl-rinetd"></a>卸载 lkl-rinetd</h3><p>运行此命令会删除 /home/tcp_nanqinlang 、移除 rc.local 对应开机自启项和清空 iptables raw 表。属于完整卸载，不会有残留。且卸载后无需重启。</p><h2 id="参考-issue"><a href="#参考-issue" class="headerlink" title="参考 issue"></a>参考 issue</h2><p><a href="https://github.com/sometimesnaiveorg/mainland/issues/85" target="_blank" rel="noopener">https://github.com/sometimesnaiveorg/mainland/issues/85</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;这里是 &lt;a href=&quot;https://github.com/tcp-nanqinlang/wiki/wiki/general&quot; targ
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一键安装脚本“openvpn-install”让服务器搭建更简单</title>
     <link href="http://yoursite.com/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E2%80%9Copenvpn-install%E2%80%9D%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%9B%B4%E7%AE%80%E5%8D%95.html"/>
     <id>http://yoursite.com/一键安装脚本“openvpn-install”让服务器搭建更简单.html</id>
     <published>2018-10-02T12:02:30.000Z</published>
-    <updated>2018-10-02T13:34:20.091Z</updated>
+    <updated>2019-04-05T11:16:31.813Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="OpenVPN-安装就是这么简单"><a href="#OpenVPN-安装就是这么简单" class="headerlink" title="OpenVPN 安装就是这么简单"></a>OpenVPN 安装就是这么简单</h1><p>OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：<a href="https://github.com/Nyr/openvpn-install" target="_blank" rel="noopener">https://github.com/Nyr/openvpn-install</a> ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。</p><p>适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。</p><p>安装命令：<code>wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</code></p><p>运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。</p><p>安装步聚：</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4wy5jqoj316w0bwjsj.jpg" alt=""></p><p>确定该IP地址是你的服务器公网IP既可，回车。</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yaufp4j316c05sdg1.jpg" alt=""></p><p>默认是1，看视频和游戏必须UDP。</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yzhagyj314y0c6dge.jpg" alt=""></p><p>端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。</p><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fvu504ti6tj316g08kq3z.jpg" alt=""></p><p>然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续…</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu50uwlx4j319a08a3zo.jpg" alt=""></p><p>一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。</p><h2 id="本教程来源于佐仔志"><a href="#本教程来源于佐仔志" class="headerlink" title="本教程来源于佐仔志"></a>本教程来源于<a href="https://www.jinbo123.com/7397.html" target="_blank" rel="noopener">佐仔志</a></h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="OpenVPN-安装就是这么简单"><a href="#OpenVPN-安装就是这么简单" class="headerlink" title="OpenVPN 安装就是这么简单"></a>OpenVPN 安装就是这么简单</h1><p>OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：<a href="https://github.com/Nyr/openvpn-install" target="_blank" rel="noopener">https://github.com/Nyr/openvpn-install</a> ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。</p><p>适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。</p><p>安装命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh</span><br></pre></td></tr></table></figure><p>运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。</p><p>安装步聚：</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4wy5jqoj316w0bwjsj.jpg" alt=""></p><p>确定该IP地址是你的服务器公网IP既可，回车。</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yaufp4j316c05sdg1.jpg" alt=""></p><p>默认是1，看视频和游戏必须UDP。</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu4yzhagyj314y0c6dge.jpg" alt=""></p><p>端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。</p><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fvu504ti6tj316g08kq3z.jpg" alt=""></p><p>然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续…</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvu50uwlx4j319a08a3zo.jpg" alt=""></p><p>一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。</p><h2 id="本教程来源于佐仔志"><a href="#本教程来源于佐仔志" class="headerlink" title="本教程来源于佐仔志"></a>本教程来源于<a href="https://www.jinbo123.com/7397.html" target="_blank" rel="noopener">佐仔志</a></h2>]]></content>
     
     <summary type="html">
     
