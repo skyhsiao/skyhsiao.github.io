@@ -157,7 +157,7 @@
 <meta property="og:image" content="https://github.com/clangcn/kcptun_for_ss_ssr/raw/master/images/05-kcp-in-01.png">
 <meta property="og:image" content="https://github.com/clangcn/kcptun_for_ss_ssr/raw/master/images/05-kcp-in-02.png">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79ly1g1sgpheq1hj31020rw78t.jpg">
-<meta property="og:updated_time" content="2019-04-05T21:27:19.101Z">
+<meta property="og:updated_time" content="2019-04-05T21:59:40.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一键安装KCPTUN for SS&#x2F;SSR on Linux">
 <meta name="twitter:description" content="A tool to auto-compile &amp;amp; install KCPTUN for SS/SSR on Linux##一键安装KCPTUN for SS/SSR on Linux。脚本是业余爱好，英文属于文盲，写的不好，欢迎您批评指正。  ##目录   致谢  已测试平台 安装前的准备工作 安装 安装命令 安装教程 Shadowsocks-libev + KCPTUN Shadowso">
@@ -469,7 +469,7 @@
                 
               
 
-              <time title="创建时间：2019-04-06 05:22:39 / 修改时间：05:27:19" itemprop="dateCreated datePublished" datetime="2019-04-06T05:22:39+08:00">2019-04-06</time>
+              <time title="创建时间：2019-04-06 05:22:39 / 修改时间：05:59:40" itemprop="dateCreated datePublished" datetime="2019-04-06T05:22:39+08:00">2019-04-06</time>
             
 
             
@@ -560,7 +560,53 @@
 <p>感谢<a href="https://github.com/teddysun/shadowsocks_install" target="_blank" rel="noopener">秋水逸冰</a>，一键安装脚本中很多代码都是从秋水的脚本中借鉴过来的，在此感谢大神们的付出。</p>
 <hr>
 <p>##已测试平台</p>
-<p>序号测试系统系统版本1debian72debian83centos64centos75ubuntu16.046ubuntu14.047ubuntu12.04</p>
+<p>序号测试系统系统版本</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">测试系统</th>
+<th style="text-align:center">系统版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">debian</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">debian</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">centos</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">centos</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">ubuntu</td>
+<td style="text-align:center">16.04</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">ubuntu</td>
+<td style="text-align:center">14.04</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">ubuntu</td>
+<td style="text-align:center">12.04</td>
+</tr>
+</tbody>
+</table>
 <p>##安装前的准备工作</p>
 <p>命令都是在你的服务器上运行的，<br>首先你要知道如何通过SSH远程登录到你的服务器上 <a href="https://www.vpser.net/other/putty-ssh-linux-vps.html" target="_blank" rel="noopener">SSH教程</a><br>其次安装时间较长，建议使用screen进行安装 <a href="https://www.vpser.net/manage/screen.html" target="_blank" rel="noopener">screen教程</a><br>最后要会一点点的VI(VIM)编辑器使用方法 <a href="https://www.vpser.net/manage/vi.html" target="_blank" rel="noopener">VI/VIM教程</a></p>
 <hr>
