@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一键安装KCPTUN for SS/SSR on Linux]]></title>
+    <url>%2F%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85KCPTUN-for-SS-SSR-on-Linux.html</url>
+    <content type="text"><![CDATA[A tool to auto-compile &amp; install KCPTUN for SS/SSR on Linux##一键安装KCPTUN for SS/SSR on Linux。脚本是业余爱好，英文属于文盲，写的不好，欢迎您批评指正。 ##目录 致谢 已测试平台 安装前的准备工作 安装 安装命令 安装教程 Shadowsocks-libev + KCPTUN ShadowsocksR + KCPTUN 防火墙设置示例 更新 卸载 ##致谢 感谢秋水逸冰，一键安装脚本中很多代码都是从秋水的脚本中借鉴过来的，在此感谢大神们的付出。 ##已测试平台 序号测试系统系统版本1debian72debian83centos64centos75ubuntu16.046ubuntu14.047ubuntu12.04 ##安装前的准备工作 命令都是在你的服务器上运行的，首先你要知道如何通过SSH远程登录到你的服务器上 SSH教程其次安装时间较长，建议使用screen进行安装 screen教程最后要会一点点的VI(VIM)编辑器使用方法 VI/VIM教程 ##安装###安装命令 123wget --no-check-certificate -O ./kcptun_for_ss_ssr-install.sh https://raw.githubusercontent.com/onekeyshell/kcptun_for_ss_ssr/master/kcptun_for_ss_ssr-install.shchmod 700 ./kcptun_for_ss_ssr-install.sh./kcptun_for_ss_ssr-install.sh install ###安装教程####Shadowsocks-libev + KCPTUN 本教程以Debian 8为例，运行脚本时会自动检测脚本是否有更新，如有更新会自动更新，然后需要再次运行脚本继续。 通过SSH登录到你的服务器上后，将安装命令一行一行的复制到你的服务器上： 运行脚本时会自动检测脚本是否有更新，如有更新会自动更新，然后需要再次运行脚本继续。 如果脚本是最新的，那么就会然你选择安装的内容： 输入SS的基本信息 输入KCP的基本信息 安装是一个漫长的过程，如果一切顺利，最后会提示你所有的配置信息，按照信息配置你的客户端就可以了最后要说明的是如果你有防火墙设置，请将你用的端口都添加进去。 ####ShadowsocksR + KCPTUN 本教程以Debian 8为例，运行脚本时会自动检测脚本是否有更新，如有更新会自动更新，然后需要再次运行脚本继续。 通过SSH登录到你的服务器上后，将安装命令一行一行的复制到你的服务器上： 运行脚本时会自动检测脚本是否有更新，如有更新会自动更新，然后需要再次运行脚本继续。 如果脚本是最新的，那么就会然你选择安装的内容： 输入SSR的基本信息 输入KCP的基本信息 安装是一个漫长的过程，如果一切顺利，最后会提示你所有的配置信息，按照信息配置你的客户端就可以了最后要说明的是如果你有防火墙设置，请将你用的端口都添加进去。 ####防火墙设置示例 centos7（请替换命令里的端口）： 123firewall-cmd --permanent --zone=public --add-port=端口/tcpfirewall-cmd --permanent --zone=public --add-port=端口/udpfirewall-cmd --reload centos6（请替换命令里的端口）： 1234iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 端口 -j ACCEPTiptables -I INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT/etc/init.d/iptables save/etc/init.d/iptables restart Debian/Ubuntu（请替换命令里的端口）： 12345678910111213iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 端口 -j ACCEPTiptables -I INPUT -m state --state NEW -m udp -p udp --dport 端口 -j ACCEPT#下面这些代码是让Debian/Ubuntu关机自动备份Iptables和启动自动加载Iptablesecho '#!/bin/bash' &gt; /etc/network/if-post-down.d/iptables &amp;&amp; \echo 'iptables-save &gt; /etc/iptables.rules' &gt;&gt; /etc/network/if-post-down.d/iptables &amp;&amp; \echo 'exit 0;' &gt;&gt; /etc/network/if-post-down.d/iptables &amp;&amp; \chmod +x /etc/network/if-post-down.d/iptables &amp;&amp; \echo '#!/bin/bash' &gt; /etc/network/if-pre-up.d/iptables &amp;&amp; \echo 'iptables-restore &lt; /etc/iptables.rules' &gt;&gt; /etc/network/if-pre-up.d/iptables &amp;&amp; \echo 'exit 0;' &gt;&gt; /etc/network/if-pre-up.d/iptables &amp;&amp; \chmod +x /etc/network/if-pre-up.d/iptables ##更新 1./kcptun_for_ss_ssr-install.sh update ##卸载 1./kcptun_for_ss_ssr-install.sh uninstall]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>VPS教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Koolshare小宝的游戏系列服务器，完美支持游戏NAT2]]></title>
+    <url>%2FKoolshare%E5%B0%8F%E5%AE%9D%E7%9A%84%E6%B8%B8%E6%88%8F%E7%B3%BB%E5%88%97%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%AE%8C%E7%BE%8E%E6%94%AF%E6%8C%81%E6%B8%B8%E6%88%8FNAT2.html</url>
+    <content type="text"><![CDATA[Game-Server##koolshare的小宝 宝大开发的游戏系列服务器（SS），支持udp in udp和udp in tcp模式，完美支持游戏NAT2。 脚本是业余爱好，英文属于文盲，写的不好，不要笑话我，欢迎您批评指正。 安装平台：CentOS、Debian、Ubuntu。 ServerInstall123wget --no-check-certificate https://github.com/clangcn/game-server/raw/master/install-game-server.sh -O ./install-game-server.shchmod 500 ./install-game-server.sh./install-game-server.sh install UnInstall1./install-game-server.sh uninstall Update1./install-game-server.sh update 服务器管理1Usage: /etc/init.d/game-server &#123;start|stop|restart|status&#125; 多用户配置文件范例按照下面格式修改默认的/usr/local/game-server/config.json文件： 12345678910111213141516171819202122&#123; "server":"0.0.0.0", "local_port":1080, "timeout": 600, "method":"chacha20", "port_password": &#123; "端口1": "密码1", "端口2": "密码2", "端口3": "密码3", "端口4": "密码4", "端口5": "密码5" &#125;, "_comment": &#123; "端口1": "端口描述1", "端口2": "端口描述2", "端口3": "端口描述3", "端口4": "端口描述4", "端口5": "端口描述5" &#125;&#125;]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>VPS教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[OpenVZ 魔改 BBR - lkl-rinetd 一键脚本]]></title>
     <url>%2FOpenVZ-%E9%AD%94%E6%94%B9-BBR-lkl-rinetd-%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC.html</url>
     <content type="text"><![CDATA[概述这里是 tcp_nanqinlang 的 lkl-rinetd 分支。 本项目 Github 地址： https://github.com/tcp-nanqinlang/lkl-rinetd 开始使用要求以下： OpenVZ 64 bit Ram &gt;&gt; 64M 更新： 2018-03-24 新增 多网卡 适配 Debian or Ubuntu适用于 单网卡（单 IP） 服务器： 12wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-debianorubuntu.shbash tcp_nanqinlang-rinetd-debianorubuntu.sh 适用于 多网卡（多 IP） 服务器，会为所有网卡（所有 IP）提供加速： 12wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-debianorubuntu-multiNIC.shbash tcp_nanqinlang-rinetd-debianorubuntu-multiNIC.sh CentOS 7和上面一样，也分 单网卡 和 多网卡 版本： 1234567# 单网卡wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-centos.shbash tcp_nanqinlang-rinetd-centos.sh# 多网卡wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0/tcp_nanqinlang-rinetd-centos-multiNIC.shbash tcp_nanqinlang-rinetd-centos-multiNIC.sh 使用说明以下进行脚本使用说明： 安装 lkl-rinetd此命令用于安装 lkl-rinetd。 在 /home/tcp_nanqinlang 进行安装，所以安装完成后不要动这个文件夹了（除非你想修改端口）。 安装过程中，会提示输入端口号。多个端口号用空格隔开。不支持端口段。 安装完成后，会开启 lkl-rinetd。以后重启机器也会随开机自启。 使用前请注意自己的 iptables 相关设置。 检查 lkl-rinetd 运行状态此命令用于检查 lkl-rinetd 运行与否，可通过返回的提示判断。 卸载 lkl-rinetd运行此命令会删除 /home/tcp_nanqinlang 、移除 rc.local 对应开机自启项和清空 iptables raw 表。属于完整卸载，不会有残留。且卸载后无需重启。 参考 issuehttps://github.com/sometimesnaiveorg/mainland/issues/85]]></content>
@@ -8,7 +30,7 @@
         <category>blog</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>Vps</tag>
       </tags>
   </entry>
   <entry>
@@ -70,6 +92,9 @@
     <title><![CDATA[全系linux VPS两步开启魔改BBR]]></title>
     <url>%2F%E5%85%A8%E7%B3%BBlinux-VPS%E4%B8%A4%E6%AD%A5%E5%BC%80%E5%90%AF%E9%AD%94%E6%94%B9BBR.html</url>
     <content type="text"><![CDATA[随着Linux系统内核不断升级，破解版锐速渐渐的跟不上了。BBR以其原生占用小的特点赢得越来越多人的喜爱，魔改版的BBR更是听说非常暴力。这里分享一个找到的魔改BBR脚本，在Ubuntu系统上测试成功。该脚本借鉴了Vicer大佬的脚本，执行两步后最后输出==Finish！==则成功。 Github地址：https://github.com/xratzh/CBBR Debian/Ubuntu（64位）开启魔改BBRUbuntu14.04需要提前：1234sudo apt-get install -y software-properties-commonsudo add-apt-repository ppa:ubuntu-toolchain-r/testsudo apt-get updatesudo apt-get -y install g++-4.9 Debian9需要提前：123wget http://snapshot.debian.org/archive/debian/20150123T220434Z/pool/main/o/openssl/libssl1.0.0_1.0.2-1_amd64.debdpkg -i libssl1.0.0_1.0.2-1_amd64.deb 以下命令Debian/Ubuntu通用第一步：1apt-get install -y wget &amp;&amp; wget --no-check-certificate -O D1.sh https://raw.githubusercontent.com/xratzh/CBBR/master/D1.sh &amp;&amp; bash D1.sh 之后要求输入Y就会重启第二步：1wget --no-check-certificate -O D2.sh https://raw.githubusercontent.com/xratzh/CBBR/master/D2.sh &amp;&amp; bash D2.sh – CentOS7开启魔改BBR第一步：1yum install -y wget &amp;&amp; wget --no-check-certificate -O C71.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C71.sh &amp;&amp; bash C71.sh 之后同样会要求输入Y重启第二步：1wget --no-check-certificate -O C72.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C72.sh &amp;&amp; bash C72.sh – CentOS6开启魔改BBR第一步：1yum install -y wget &amp;&amp; wget --no-check-certificate -O C61.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C61.sh &amp;&amp; bash C61.sh 之后输入Y就会重启第二步：1wget --no-check-certificate -O C62.sh https://raw.githubusercontent.com/xratzh/CBBR/master/C62.sh &amp;&amp; bash C62.sh – 存在对于其他内核的删除，只保留4.11.8内核为什么不能一键，因为Linux内核在4.0后支持不重启更换，但是CentOS和Debian/Ubuntu很多的内核都是3.X的版本，Debian9和Ubuntu16.04则是4.X的版本。Xratzh压力测试，发现bbr和魔改bbr都开启时会达到最快（个人验证）脚本里加入了对内核的锁定，之后update时不会变动内核。内核统一选择4.11.8版本。 – Ps: 本教程转至 ==厘米天空==]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
       <tags>
         <tag>VPS教程</tag>
       </tags>
