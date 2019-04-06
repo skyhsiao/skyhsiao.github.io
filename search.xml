@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ocservauto For Debian 8]]></title>
+    <url>%2FOcservauto-For-Debian-8.html</url>
+    <content type="text"><![CDATA[这是一枚适用于deibian的openconnect_server安装脚本。 默认使用密码方式登录，思科anyconnect客户端可连可用。 中文详情 戳这里 脚本要求 1、ubuntu &gt;= 14.04 2、debian &gt;=7 3、openvz需要支持打开tun/tap服务 ============ 安装12345apt-get updateapt-get upgradeapt-get install wgetwget http://git.io/p9r8 --no-check-certificate -O ocservauto.shbash ocservauto.sh Profiles in /etc/ocserv/ When you change the profiles,restart the vpn server. 重启1/etc/init.d/ocserv restart 帮助1bash ocservauto.sh h ============]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>VPS教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Wireguard+udp加速（Ubuntu版）]]></title>
     <url>%2FWireguard-udp%E5%8A%A0%E9%80%9F%EF%BC%88Ubuntu%E7%89%88%EF%BC%89.html</url>
     <content type="text"><![CDATA[脚本要求 1、ubuntu &gt;= 14.04 2、客户端适用于windows 服务端搭建1、使用下面命令运行一键脚本1wget https://raw.githubusercontent.com/atrandys/wireguard/master/wireguard_game_ubuntu.sh &amp;&amp; chmod +x wireguard_game_ubuntu.sh &amp;&amp; ./wireguard_game_ubuntu.sh 弹出页面选择1. 安装wireguard+udpspeeder+udp2raw [ 安装过程中需要输入本地电脑的默认网关，打开本地电脑cmd，使用ipconfig命令，查看默认网关，我这里是192.168.2.1 将默认网关填写，然后回车 安装完成，进入/etc/wireguard/client，将client.conf传输到本地电脑，你可以使用FTP工具，也可以直接cat /etc/wireguard/client/client.conf，将内容复制，在本地电脑保存为client.conf 客户端配置1、下载安装tunsafe和npcap 下载tunsafe windows版 下载下来然后安装tunsafe，安装过程很简单，会安装一个tap网卡，全部允许就可以了。 下载Npcap 下载下来安装即可，注意安装过程中勾选如下图中选项，然后一路下一步安装就可以了。 2、下载udp客户端 下载udp客户端 将下载的压缩包，解压到C盘下，在C盘下会得到一个udp文件夹，里面有speeder和udp2raw两个客户端文件。 一定必须要解压到C盘！！！！！然后就不用管了，tunsafe会自动调用。 3、配置客户端打开tunsafe，Options中，勾选Allow Pre/Post Commands 点击File，选择import，将在服务端下载的client.conf导入，然后connect即可。 以上就是本次游戏加速方案的全部内容，为了让客户端好用一些，研究这些批处理命令快把我搞废了，小伙伴们支持一下哈～～ 多用户配置和centos的增加用户方式是一模一样的。 1、执行一键脚本1./wireguard_game_ubuntu.sh 2、选择增加用户给新用户起个名字，不要和之前的重复（不可使用client），我用new1来演示 执行后如果没有错误提示就成功了。 3、进入/etc/wireguard/client目录，下载生成的用户文件。 4、新用户需要下载udp软件放在C盘 下载UDP客户端 将下载的压缩包，解压到C盘下，在C盘下会得到一个udp文件夹，里面有speeder和udp2raw两个客户端文件，搭建wg+udp加速方案教程中有提到。 5、新用户在本地修改new1.conf，修改其中的默认网关为新用户自己电脑的实际默认网关。 6、下载安装tunsafe，导入new1.conf即可连接。 7、如需增加多个用户，重复上面步骤即可 Ps: 本教程转至 ==Atrandys==]]></content>
@@ -25,7 +36,7 @@
   <entry>
     <title><![CDATA[Koolshare小宝的游戏系列服务器，完美支持游戏NAT2]]></title>
     <url>%2FKoolshare%E5%B0%8F%E5%AE%9D%E7%9A%84%E6%B8%B8%E6%88%8F%E7%B3%BB%E5%88%97%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E5%AE%8C%E7%BE%8E%E6%94%AF%E6%8C%81%E6%B8%B8%E6%88%8FNAT2.html</url>
-    <content type="text"><![CDATA[Game-Server##koolshare的小宝 宝大开发的游戏系列服务器（SS），支持udp in udp和udp in tcp模式，完美支持游戏NAT2。 脚本是业余爱好，英文属于文盲，写的不好，不要笑话我，欢迎您批评指正。 安装平台：CentOS、Debian、Ubuntu。 ServerInstall123wget --no-check-certificate https://github.com/clangcn/game-server/raw/master/install-game-server.sh -O ./install-game-server.shchmod 500 ./install-game-server.sh./install-game-server.sh install UnInstall1./install-game-server.sh uninstall Update1./install-game-server.sh update 服务器管理1Usage: /etc/init.d/game-server &#123;start|stop|restart|status&#125; 多用户配置文件范例按照下面格式修改默认的/usr/local/game-server/config.json文件： 12345678910111213141516171819202122&#123; "server":"0.0.0.0", "local_port":1080, "timeout": 600, "method":"chacha20", "port_password": &#123; "端口1": "密码1", "端口2": "密码2", "端口3": "密码3", "端口4": "密码4", "端口5": "密码5" &#125;, "_comment": &#123; "端口1": "端口描述1", "端口2": "端口描述2", "端口3": "端口描述3", "端口4": "端口描述4", "端口5": "端口描述5" &#125;&#125;]]></content>
+    <content type="text"><![CDATA[Game-Server##koolshare的小宝 宝大开发的游戏系列服务器（SS），支持udp in udp和udp in tcp模式，完美支持游戏NAT2。 脚本是业余爱好，英文属于文盲，写的不好，不要笑话我，欢迎您批评指正。 安装平台：CentOS、Debian、Ubuntu。 Server Install123wget --no-check-certificate https://github.com/clangcn/game-server/raw/master/install-game-server.sh -O ./install-game-server.shchmod 500 ./install-game-server.sh./install-game-server.sh install UnInstall1./install-game-server.sh uninstall Update1./install-game-server.sh update 服务器管理1Usage: /etc/init.d/game-server &#123;start|stop|restart|status&#125; 多用户配置文件范例按照下面格式修改默认的/usr/local/game-server/config.json文件： 12345678910111213141516171819202122&#123; "server":"0.0.0.0", "local_port":1080, "timeout": 600, "method":"chacha20", "port_password": &#123; "端口1": "密码1", "端口2": "密码2", "端口3": "密码3", "端口4": "密码4", "端口5": "密码5" &#125;, "_comment": &#123; "端口1": "端口描述1", "端口2": "端口描述2", "端口3": "端口描述3", "端口4": "端口描述4", "端口5": "端口描述5" &#125;&#125;]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -47,7 +58,7 @@
   <entry>
     <title><![CDATA[一键安装脚本“openvpn-install”让服务器搭建更简单]]></title>
     <url>%2F%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E2%80%9Copenvpn-install%E2%80%9D%E8%AE%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%9B%B4%E7%AE%80%E5%8D%95.html</url>
-    <content type="text"><![CDATA[OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。 安装命令： 1wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。 安装步聚： 确定该IP地址是你的服务器公网IP既可，回车。 默认是1，看视频和游戏必须UDP。 端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。 然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续… 一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。 本教程来源于佐仔志]]></content>
+    <content type="text"><![CDATA[OpenVPN 安装就是这么简单OpenVPN 安装并不是想像的那么难，更何况还有一键安装包呢？该 OpenVPN 一键安装包非本人维护，它真正的主人是 @Nyr ，开源地址是：https://github.com/Nyr/openvpn-install ，整个安装过程非常简单，就一条命令，根据提醒步骤安装既可。 适用平台：Debian、Ubuntu、CentOS，版本越新越好。该项目目前在Github上被打星6K多次，赶紧收藏吧。即使您之前没有使用OpenVPN，该脚本也可让您在一分钟内设置自己的VPN服务器。OpenVPN 安装就是这么简单。 安装命令1wget https://git.io/vpn -O openvpn-install.sh &amp;&amp; bash openvpn-install.sh 运行脚本后按照助手的步骤操作既可。安装一次后，你可以再次运行它来添加更多的用户，或者删除其中的一些用户，甚至完全卸载OpenVPN。而且也就是输入以上这条命令。 安装步聚 确定该IP地址是你的服务器公网IP既可，回车。 默认是1，看视频和游戏必须UDP。 端口建议你改一下（四位数），而DNS默认是系统默认的，建议选择2或3。 然后让你输入用户名，默认为Client,改一个自已喜欢的。接下来按任一键继续… 一分钟不到就安装完毕。根据提示路径下载用户配置.ovpn文件。把该配置导入到OpenVPN客户端连接就可以了，密码都不需要输进去。 本教程来源于佐仔志]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -80,7 +91,7 @@
   <entry>
     <title><![CDATA[hexo 给博客添加版权、共享按钮、打赏]]></title>
     <url>%2Fhexo-%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%89%88%E6%9D%83%E3%80%81%E5%85%B1%E4%BA%AB%E6%8C%89%E9%92%AE%E3%80%81%E6%89%93%E8%B5%8F.html</url>
-    <content type="text"><![CDATA[一、配置 版权1234post_copyright: enable: true author: hiekay copyright_text: 作者拥有版权，请注明出处转载。1234 二、添加共享按钮- 安装 1npm install --save hexo-helper-qrcode 配置： 1shareto: true 三、添加打赏二维码 1、准备好支付宝、微信收款二维码 2、放到img/ 目录下 3、在配置文件中配置 12345donate: enable: true alipay_qr: /img/AliPayQR.png wechat_qr: /img/WeChatQR.png paypal_url:]]></content>
+    <content type="text"><![CDATA[一、配置 版权1234post_copyright: enable: true author: hiekay copyright_text: 作者拥有版权，请注明出处转载。1234 二、添加共享按钮安装1npm install --save hexo-helper-qrcode 配置1shareto: true 三、添加打赏二维码 1、准备好支付宝、微信收款二维码 2、放到img/ 目录下 3、在配置文件中配置 12345donate: enable: true alipay_qr: /img/AliPayQR.png wechat_qr: /img/WeChatQR.png paypal_url:]]></content>
       <categories>
         <category>blog</category>
       </categories>
