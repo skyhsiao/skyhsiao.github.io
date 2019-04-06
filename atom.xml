@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-06T00:04:00.332Z</updated>
+  <updated>2019-04-06T00:50:53.639Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一个免费的WireGuard VPN server</title>
+    <link href="http://yoursite.com/%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84WireGuard-VPN-server.html"/>
+    <id>http://yoursite.com/一个免费的WireGuard-VPN-server.html</id>
+    <published>2019-04-06T00:48:55.000Z</published>
+    <updated>2019-04-06T00:50:53.639Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>一个免费的WireGuard VPN server</strong></p><h3 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h3><p><a href="https://portal.cloud" target="_blank" rel="noopener">https://portal.cloud</a></p><p><strong>Get $15 free. No credit card required.</strong></p><p>注册即有15刀，可以免费使用一个月</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1g1slscu07xj30zk0jt74u.jpg" alt=""></p><h3 id="进入Subspace选择服务器地址安装"><a href="#进入Subspace选择服务器地址安装" class="headerlink" title="进入Subspace选择服务器地址安装"></a>进入<strong>Subspace</strong>选择服务器地址安装</h3><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1g1sm146afbj30v60e9mxc.jpg" alt=""></p><p>进入后台</p><h3 id="申请配置文件"><a href="#申请配置文件" class="headerlink" title="申请配置文件"></a>申请配置文件</h3><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1g1slnxu1ynj30vt0hejrg.jpg" alt=""></p><h3 id="下载配置文件"><a href="#下载配置文件" class="headerlink" title="下载配置文件"></a>下载配置文件</h3><p>此配置文件可用于tunsafe或wireguard客户端。</p><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1g1sm9vn415j30ks05c0sn.jpg" alt=""></p><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1g1smfpk4x2j30kw08mwf8.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;一个免费的WireGuard VPN server&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;注册账号&quot;&gt;&lt;a href=&quot;#注册账号&quot; class=&quot;headerlink&quot; title=&quot;注册账号&quot;&gt;&lt;/a&gt;注册账号&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;htt
+      
+    
+    </summary>
+    
+      <category term="分享" scheme="http://yoursite.com/categories/%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ocservauto For Debian 8</title>
     <link href="http://yoursite.com/Ocservauto-For-Debian-8.html"/>
     <id>http://yoursite.com/Ocservauto-For-Debian-8.html</id>
     <published>2019-04-05T23:45:50.000Z</published>
-    <updated>2019-04-06T00:04:00.332Z</updated>
+    <updated>2019-04-06T00:08:55.754Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一枚适用于deibian的openconnect_server安装脚本。</p><p>默认使用密码方式登录，思科anyconnect客户端可连可用。</p><p>中文详情 <a href="http://www.fanyueciyuan.info/fq/ocserv-debian.html" target="_blank" rel="noopener">戳这里</a></p><h2 id="脚本要求"><a href="#脚本要求" class="headerlink" title="脚本要求"></a><strong>脚本要求</strong></h2><blockquote><p>1、ubuntu &gt;= 14.04</p><p>2、debian &gt;=7</p><p>3、openvz需要支持打开tun/tap服务</p></blockquote><p>============</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get upgrade</span><br><span class="line">apt-get install wget</span><br><span class="line">wget http://git.io/p9r8 --no-check-certificate -O ocservauto.sh</span><br><span class="line">bash ocservauto.sh</span><br></pre></td></tr></table></figure><p>Profiles in /etc/ocserv/</p><p>When you change the profiles,restart the vpn server.</p><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/ocserv restart</span><br></pre></td></tr></table></figure><h1 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ocservauto.sh h</span><br></pre></td></tr></table></figure><p>============</p>]]></content>
+    <content type="html"><![CDATA[<p>这是一枚适用于deibian的openconnect_server安装脚本。</p><p>默认使用密码方式登录，思科anyconnect客户端可连可用。</p><p>中文详情 <a href="http://www.fanyueciyuan.info/fq/ocserv-debian.html" target="_blank" rel="noopener">戳这里</a></p><h1 id="脚本要求"><a href="#脚本要求" class="headerlink" title="脚本要求"></a><strong>脚本要求</strong></h1><blockquote><p>1、ubuntu &gt;= 14.04</p><p>2、debian &gt;=7</p><p>3、openvz需要支持打开tun/tap服务</p></blockquote><p>============</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get upgrade</span><br><span class="line">apt-get install wget</span><br><span class="line">wget http://git.io/p9r8 --no-check-certificate -O ocservauto.sh</span><br><span class="line">bash ocservauto.sh</span><br></pre></td></tr></table></figure><p>Profiles in /etc/ocserv/</p><p>When you change the profiles,restart the vpn server.</p><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/ocserv restart</span><br></pre></td></tr></table></figure><h1 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ocservauto.sh h</span><br></pre></td></tr></table></figure><p>============</p>]]></content>
     
     <summary type="html">
     

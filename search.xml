@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一个免费的WireGuard VPN server]]></title>
+    <url>%2F%E4%B8%80%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84WireGuard-VPN-server.html</url>
+    <content type="text"><![CDATA[一个免费的WireGuard VPN server 注册账号https://portal.cloud Get $15 free. No credit card required. 注册即有15刀，可以免费使用一个月 进入Subspace选择服务器地址安装 进入后台 申请配置文件 下载配置文件此配置文件可用于tunsafe或wireguard客户端。]]></content>
+      <categories>
+        <category>分享</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ocservauto For Debian 8]]></title>
     <url>%2FOcservauto-For-Debian-8.html</url>
     <content type="text"><![CDATA[这是一枚适用于deibian的openconnect_server安装脚本。 默认使用密码方式登录，思科anyconnect客户端可连可用。 中文详情 戳这里 脚本要求 1、ubuntu &gt;= 14.04 2、debian &gt;=7 3、openvz需要支持打开tun/tap服务 ============ 安装12345apt-get updateapt-get upgradeapt-get install wgetwget http://git.io/p9r8 --no-check-certificate -O ocservauto.shbash ocservauto.sh Profiles in /etc/ocserv/ When you change the profiles,restart the vpn server. 重启1/etc/init.d/ocserv restart 帮助1bash ocservauto.sh h ============]]></content>
